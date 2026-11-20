@@ -7,3 +7,32 @@
 .pbq-side-bank{border-bottom:1px solid #ccc;padding-bottom:10px;margin-bottom:12px}.pbq-side-bank>strong{font-size:16px}.pbq-side-bank>.small{font-size:12px;line-height:1.35;margin:5px 0}.pbq-side-choices{max-height:28dvh;min-height:40px;overflow-y:auto;display:grid;gap:5px;padding:3px}.pbq-side-choices .pbq-side-chip{display:block;width:100%;text-align:left;white-space:normal;font-size:13px;line-height:1.2;padding:8px 9px;min-height:31px;color:#111;background:#fff;border:1px solid #777;cursor:grab;touch-action:none}.pbq-side-choices .pbq-side-chip.active{background:#ffe1b5;border-color:#be631a;outline:2px solid #be631a}.pbq-side-choices .pbq-side-chip:hover{background:#fff2d8}.pbq-side-choices .pbq-side-chip:disabled{cursor:default;opacity:.5}
 .pbq-side-choices{max-height:min(18dvh,165px)}
 .pbq-side-choices .pbq-side-chip{background:transparent;border:0;border-bottom:1px solid #ccc;border-radius:0;padding:6px 2px;text-decoration:underline;cursor:grab}.pbq-side-choices .pbq-side-chip:hover,.pbq-side-choices .pbq-side-chip.active{background:#fff4d7;outline:0;border-bottom:2px solid #a65a10}
+
+/* Number C4's existing five printed slots, without additional boxes. */
+.pbq-order-number{position:absolute;width:3%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:clamp(9px,1.1vw,15px);color:#16395f;pointer-events:none;z-index:5}
+.pbq-image-drop.order-selected{outline:3px solid #146fc5;outline-offset:1px;background:#d7edff}
+.pbq-image-drop[draggable=true]{cursor:grab;touch-action:none}
+.pbq-image-drop[draggable=true]:active{cursor:grabbing}
+
+/* C5: the six input fields sit on the six printed underlines.
+   Do not paint new square boxes over the source text. */
+.pbq-workstation .pbq-c5-field{
+ box-sizing:border-box;
+ border:0; border-bottom:1px solid #555; border-radius:0;
+ background:rgba(255,255,255,.88);
+ padding:0 1px; text-align:center; font:600 clamp(8px,.72vw,12px)/1 Arial,sans-serif;
+ color:#141414; box-shadow:none;
+}
+.pbq-workstation .pbq-c5-field:focus{outline:2px solid #2178c7;outline-offset:1px;background:#fff}
+
+/* C5 submission feedback must override the neutral underline style. */
+.pbq-workstation .pbq-c5-field.correct,
+.pbq-workstation .pbq-c5-field.correct:disabled{
+  background:#d5f7df; border:2px solid #16843b; color:#075a26;
+  box-shadow:0 0 0 1px rgba(22,132,59,.15);
+}
+.pbq-workstation .pbq-c5-field.incorrect,
+.pbq-workstation .pbq-c5-field.incorrect:disabled{
+  background:#ffe0e0; border:2px solid #c52432; color:#8d0819;
+  box-shadow:0 0 0 1px rgba(197,36,50,.15);
+}

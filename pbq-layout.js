@@ -14,15 +14,15 @@ const PBQ_BOXES={
  B5:[198,225,253,281,310,339,366].map(y=>[82,y,72,20]),
  C1:[248,288,328,368,409,448,488,528].map(y=>[88,y,78,22]),
  C2:[121,191,262,332,402,472].map(y=>[96,y,150,26]),
- C3:[269,307,345,383,421,459].map(y=>[48,y,23,20]),
+ C3:[268,297,326,355,384,413].map(y=>[48,y,23,19]),
  C4:[65,107,148,190,231].map(y=>[127,y,198,35]),
- C5:[433,472,510,548,585,624].map(y=>[38,y,37,22])
+ C5:[360,393,426,459,492,525].map(y=>[38,y,38,20])
 };
 // Two printed PBQs share some source pages. Clip the viewport to the numbered
 // activity without shifting its absolute answer coordinates.
 const PBQ_SECTION_WINDOWS={
  A2:[0,260],A3:[260,670],
- C4:[0,320],C5:[365,680]
+ C4:[0,320],C5:[322,625]
 };
 // The source's small multiple-choice letter blanks are answered with letters,
 // while the larger boxes accept their full option text.
